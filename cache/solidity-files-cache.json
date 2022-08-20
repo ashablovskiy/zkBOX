@@ -1,0 +1,1442 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "sources": "src",
+    "tests": "test",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/forge-std/src/Script.sol": {
+      "lastModificationDate": 1659118747415,
+      "contentHash": "b313d0193442f5a12848be9c422a0064",
+      "sourceName": "lib/forge-std/src/Script.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "Script": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Script.sol/Script.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1659118747415,
+      "contentHash": "1759d8269e5e14639f70a8b52dcee716",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/solmate/lib/ds-test/src/test.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Test.sol/Test.json"
+        },
+        "stdError": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Test.sol/stdError.json"
+        },
+        "stdMath": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Test.sol/stdMath.json"
+        },
+        "stdStorage": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Test.sol/stdStorage.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/forge-std/src/Vm.sol": {
+      "lastModificationDate": 1659118747416,
+      "contentHash": "8eb0bacb50669fafb4a48134fc93ed36",
+      "sourceName": "lib/forge-std/src/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Vm.sol/Vm.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1659118747416,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "lib/forge-std/src/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "console.sol/console.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1659118747416,
+      "contentHash": "5df91f8e93efbfcccf68973dc1b74a70",
+      "sourceName": "lib/forge-std/src/console2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console2": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "console2.sol/console2.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1659118747430,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Ownable": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Ownable.sol/Ownable.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1659118747450,
+      "contentHash": "92cc1aad41bdb18ca20f6e03f461de7d",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1659118747450,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1659118747451,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20Metadata": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC20Metadata.sol/IERC20Metadata.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol": {
+      "lastModificationDate": 1659118747451,
+      "contentHash": "3c98f8ccc741d97ece615ce32d638d4c",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC20Permit": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "draft-ERC20Permit.sol/ERC20Permit.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "lastModificationDate": 1659118747451,
+      "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20Permit": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "draft-IERC20Permit.sol/IERC20Permit.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "79ac3a660a4ff0bad2c2f65ec4d61d86",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC721": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ERC721.sol/ERC721.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "ec99d946db3685a3630554aa6055bd7f",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC721.sol/IERC721.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721Receiver": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC721Receiver.sol/IERC721Receiver.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "88095889e59d16821879a8083f906503",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC721Enumerable": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ERC721Enumerable.sol/ERC721Enumerable.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721Enumerable": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC721Enumerable.sol/IERC721Enumerable.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1659118747452,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC721Metadata": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC721Metadata.sol/IERC721Metadata.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+      "lastModificationDate": 1659118747454,
+      "contentHash": "02560bbb9e081911e486286da3fa761f",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.1",
+      "artifacts": {
+        "Address": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Address.sol/Address.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1659118747454,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Context.sol/Context.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1659118747454,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Counters": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Counters.sol/Counters.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1659118747454,
+      "contentHash": "cf46906c4035f51639a22265066a9e78",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Strings": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Strings.sol/Strings.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1659118747454,
+      "contentHash": "1dfb7cf7c7e2edae73403d50a59cc967",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ECDSA": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ECDSA.sol/ECDSA.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol": {
+      "lastModificationDate": 1659118747455,
+      "contentHash": "161aae4dc1450371d0f324488f66a9cf",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "EIP712": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "draft-EIP712.sol/EIP712.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1659118747455,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC165": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ERC165.sol/ERC165.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1659118747455,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC165": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IERC165.sol/IERC165.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/lib/solmate/lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1659118747476,
+      "contentHash": "962996f0e05d5218857a538a62d7c47e",
+      "sourceName": "lib/solmate/lib/ds-test/src/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/Box.sol": {
+      "lastModificationDate": 1660976949751,
+      "contentHash": "136cdc45e96d4dc5839e36536414ea36",
+      "sourceName": "src/Box.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "src/ERC20.sol",
+        "src/NFT.sol",
+        "src/assertVerify.sol",
+        "src/depositVerify.sol",
+        "src/mintVerify.sol",
+        "src/redeemVerify.sol"
+      ],
+      "versionRequirement": null,
+      "artifacts": {
+        "Box": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Box.sol/Box.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/ERC20.sol": {
+      "lastModificationDate": 1660161442385,
+      "contentHash": "c81089c7cc80b0ad8e6c4ad9e2df3707",
+      "sourceName": "src/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "KhaosAsset": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "ERC20.sol/KhaosAsset.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/NFT.sol": {
+      "lastModificationDate": 1660977205506,
+      "contentHash": "1ab5c9369da8dbff1fbef5d1fe3323ba",
+      "sourceName": "src/NFT.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "BoxedNFT": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "NFT.sol/BoxedNFT.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/assertVerify.sol": {
+      "lastModificationDate": 1660847134397,
+      "contentHash": "3328f51b928775ed76d011963003336d",
+      "sourceName": "src/assertVerify.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "AssertVerifier": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "assertVerify.sol/AssertVerifier.json"
+        },
+        "Pairing": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "assertVerify.sol/Pairing.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/depositVerify.sol": {
+      "lastModificationDate": 1660847208083,
+      "contentHash": "c02eba4defb8f0855668463c2490569d",
+      "sourceName": "src/depositVerify.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.11",
+      "artifacts": {
+        "DepositVerifier": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "depositVerify.sol/DepositVerifier.json"
+        },
+        "PairingD": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "depositVerify.sol/PairingD.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/mintVerify.sol": {
+      "lastModificationDate": 1660849537064,
+      "contentHash": "4c04e5f3b9594e8e177fea93df220ccd",
+      "sourceName": "src/mintVerify.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "MintVerifier": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "mintVerify.sol/MintVerifier.json"
+        },
+        "PairingM": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "mintVerify.sol/PairingM.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/src/redeemVerify.sol": {
+      "lastModificationDate": 1660976257818,
+      "contentHash": "15ed082a0bb4640a58060a52e4e0383f",
+      "sourceName": "src/redeemVerify.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "PairingR": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "redeemVerify.sol/PairingR.json"
+        },
+        "RedeemVerifier": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "redeemVerify.sol/RedeemVerifier.json"
+        }
+      }
+    },
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/capstone/test/Boxed.t.sol": {
+      "lastModificationDate": 1660978062951,
+      "contentHash": "56f68a74fa87b0f2f04f37cead3cdf79",
+      "sourceName": "test/Boxed.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
+        "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/solmate/lib/ds-test/src/test.sol",
+        "src/Box.sol",
+        "src/ERC20.sol",
+        "src/NFT.sol",
+        "src/assertVerify.sol",
+        "src/depositVerify.sol",
+        "src/mintVerify.sol",
+        "src/redeemVerify.sol"
+      ],
+      "versionRequirement": "^0.8.7",
+      "artifacts": {
+        "BoxTest": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Boxed.t.sol/BoxTest.json"
+        }
+      }
+    }
+  }
+}
