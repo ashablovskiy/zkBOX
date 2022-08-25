@@ -12,8 +12,8 @@ contract BoxedNFT is ERC721, ERC721Enumerable, Ownable {
 
     mapping (uint => uint) public nullifiersAssigned; //TokenId -> Nullifier; 
     mapping (uint => uint) public tokenIdAssigned; //Nullifier -> TokenId; 
+
     Counters.Counter private _tokenIdCounter;
-    event newMint(address, uint);
     constructor() ERC721("Certificate", "BXD") {}
 
     function safeMint(address to, uint nullifier) public  {
@@ -22,7 +22,6 @@ contract BoxedNFT is ERC721, ERC721Enumerable, Ownable {
         _safeMint(to, tokenId);
         nullifiersAssigned[tokenId]=nullifier;
         tokenIdAssigned[nullifier]=tokenId;
-        emit newMint(to, tokenId);
     }
 
 
@@ -58,10 +57,6 @@ contract BoxedNFT is ERC721, ERC721Enumerable, Ownable {
     }
 
     function burn(uint256 tokenId) external  {
-       address owner = ownerOf(tokenId);
-       require(owner == msg.sender, "Only the owner of NFT can burn it");
-       nullifiersAssigned; //TokenId -> Nullifier; 
-       tokenIdAssigned; //Nullifier -> TokenId; 
        super._burn(tokenId);
     }
 }

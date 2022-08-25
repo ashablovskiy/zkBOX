@@ -95,13 +95,14 @@ contract Box {
         require(commitments[input[1]]>0, "No assets to withdraw");
         require(nullifier[input[0]], "Nullifier was not used before");
         require(certificate.nullifiersAssigned(input[0])==0, "Certificate for nullifier is not minted");
+        require(certificate.ownerOf(certificate.tokenIdAssigned(input[0])) == msg.sender, "Only the owner of NFT can burn it");
 
         totalAssets -= input[2]; // reduce total assets variable
         commitments[input[1]]=0; // reset commitment balance to 0
         
-        certificate.burn(certificate.tokenIdAssigned(input[0])); // burn NFT. to get TokenId tokenIdAssigned mapping is used
-        
-        token.transferFrom(address(this), msg.sender, input[2]); // transfer balance to redeemer
+        token.transfer(msg.sender, input[2]); // transfer balance to redeemer
+ 
+        certificate.burn(certificate.tokenIdAssigned(input[0])); // burn NFT: To get TokenId tokenIdAssigned mapping is used
 
         emit Redeem(input[1], input[0]);
 

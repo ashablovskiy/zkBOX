@@ -45,6 +45,7 @@ using stdStorage for StdStorage;
 
         asset.mint(Alice, 200);
         asset.mint(RandomUser, 500);
+
     }
 
 
@@ -92,7 +93,8 @@ using stdStorage for StdStorage;
 
 
         box.mintCertificate(a1, b1, c1, input1);
-        console.log("OWNER", certificate.getTokenId(0));
+
+        assertEq(certificate.balanceOf(Bob),1); // to make sure that NFT is minted to Bob
 
         ////////////PROOF MINIMUM BALANCE///////////////////////////////
 
@@ -111,6 +113,8 @@ using stdStorage for StdStorage;
         box.proofMinBalance(a21, b21, c21, input21); // TEST PROOF FOR MIN_BALANCE = 4
         box.proofMinBalance(a22, b22, c22, input22); // TEST PROOF FOR MIN_BALANCE = 8
 
+
+
         ////////////REDEEM ASSETS///////////////////////////////
 
         //PROOF GENERATED FOR {"secret": "1999","amount": "10"}
@@ -118,8 +122,8 @@ using stdStorage for StdStorage;
         uint[2][2] memory b31 = [[uint(0x2236df31dfe04d0b024d97d4bb33bbcca1a85d43ffc63b8e6783959bfdd4e88d), uint(0x07c9d625ddf42e658310503741c3c84f8ba8bcbcb86ccab245bd7b595d0334db)],[uint(0x0f52528b5990c31782b03c3d931648d6a603ce465912025b0bfc64c413e97bcd), uint(0x1ff4f855a8a9b83e90121be4807fec1ddeff080f0ae9bcd772d0708f83b10de3)]];
         uint[2] memory c31 = [uint(0x07fe36a725e19025e0a5d6cf1c68ad2cb4fef5f3ce9a74142f859ff19f2e711d), uint(0x2595f817bc816f1e4854e78b1f59a98d2d8b71a9d93cf9c2b3dbfee8a3179f4e)];
         uint[3] memory input31 = [uint(0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea), uint(0x17bb043c01d34e7d8bb7369d8df719ed3132a5bd7cbc543a1a06b43d70ca8d8f), 10];
-
-       box.redeem(a31, b31, c31, input31);
+        
+        box.redeem(a31, b31, c31, input31);
 
         vm.stopPrank();
 
