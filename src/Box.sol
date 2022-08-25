@@ -92,8 +92,8 @@ contract Box {
     function redeem(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[3] memory input) public returns(bool) {
 
         require(rv.verifyProof(a, b, c, input), "Proof is not valid");
-        require(commitments[input[1]]>0, "No assets to withdraw");
         require(nullifier[input[0]], "Nullifier was not used before");
+        require(commitments[input[1]]>0, "No assets to withdraw");
         require(certificate.nullifiersAssigned(input[0])==0, "Certificate for nullifier is not minted");
         require(certificate.ownerOf(certificate.tokenIdAssigned(input[0])) == msg.sender, "Only the owner of NFT can burn it");
 

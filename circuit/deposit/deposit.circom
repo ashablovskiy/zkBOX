@@ -5,7 +5,7 @@ include "./mimcsponge.circom";
 template hashDeposit() {
     signal input amount;
     signal input secretKey;
-    signal output keyHash;
+    signal output commitment;
 
     component mimc = MiMCSponge(2, 220, 1);
     mimc.ins[0] <== secretKey;
@@ -13,7 +13,7 @@ template hashDeposit() {
 
     mimc.k <== 0;
 
-    keyHash <== mimc.outs[0];
+    commitment <== mimc.outs[0];
 }
 
 component main {public[amount]}  = hashDeposit();

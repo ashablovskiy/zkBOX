@@ -1044,8 +1044,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/Box.sol": {
-      "lastModificationDate": 1661414782764,
-      "contentHash": "a403fd81595302070a7f807041e58b6b",
+      "lastModificationDate": 1661417446882,
+      "contentHash": "10be6dea635644ad84ed0417b8fcc9ea",
       "sourceName": "src/Box.sol",
       "solcConfig": {
         "settings": {
@@ -1368,8 +1368,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/test/Boxed.t.sol": {
-      "lastModificationDate": 1661416455549,
-      "contentHash": "91d88cb63b99b98e63cd3250c6c9e24b",
+      "lastModificationDate": 1661418189662,
+      "contentHash": "0b1c2a2db009522c871cc577f0f5d289",
       "sourceName": "test/Boxed.t.sol",
       "solcConfig": {
         "settings": {
@@ -1431,7 +1431,7 @@
         "src/mintVerify.sol",
         "src/redeemVerify.sol"
       ],
-      "versionRequirement": "^0.8.7",
+      "versionRequirement": "^0.8.13",
       "artifacts": {
         "BoxTest": {
           "0.8.13+commit.abaa5c0e.Darwin.appleclang": "Boxed.t.sol/BoxTest.json"

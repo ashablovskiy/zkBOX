@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 import "forge-std/console.sol";
@@ -49,15 +49,30 @@ using stdStorage for StdStorage;
 
       function testWorkflow() public {
 
-        // WORKFLOW: DEPOSIT -> MINT -> ASSERT ASSET TRESHOLD
-
        ///////////////////////DEPOSIT////////////////////
-       
-        vm.startPrank(Alice); //DEPOSIT ALICE
-        asset.approve(address(box), 200);
-       
-       //PROOF GENERATED FOR {"amount": "10","secretKey": "1999"} 
 
+        ///DEPOSIT BY RandomUser ///////       
+        vm.startPrank(RandomUser); 
+       
+        asset.approve(address(box), 100);
+        
+        //PROOF GENERATED FOR {"amount": "15","secretKey": "111"} 
+        uint[2] memory a00 = [uint(0x05621126ee378a2144c247dcb27c2bd22bed35067a1f6158aa57b38727da4e70), uint(0x199ca7455d481744cb06754d9b640c41b5585c31cd57248c1dc2cc9f32d652ae)];
+        uint[2][2] memory b00 = [[uint(0x2371b1c6bcdb53096f679bb7460049266cf0cb440bac79f0131d4a91db0e1697), uint(0x1eee51767bc2dc62847af6b9f8a7bb1f785bedff1a6518f52c95ddfbe323e8f4)],[uint(0x2a0cd2bcd94c2fe4b608270678aa0f884dbba32387bfdee2bf6d560a31c985fb), uint(0x21f14b9b0d22a22e0f188924130b7b77d8fa899f9585a23981544cf7be400077)]];
+        uint[2] memory c00 = [uint(0x061f50752dcc1c73ec50fcb96e6431fdf0bb9e738bcb3f4ac3cd56a795e74850), uint(0x1fc9adb6285451e276eda61c6d6cad1783e722cd5a103479298d3a3f8c853c25)];
+        uint256[2] memory input00 = [uint(0x11b910bdf7ee7aef1d52904f4b92260a4008e86a2e05b2e6df9256ae61d30efe),15];
+
+        box.deposit(a00, b00, c00, input00);
+
+        assertEq(box.totalAssets(), 15); //Check that total assets is equal to 15
+
+        vm.stopPrank();
+        
+        ///DEPOSIT BY Alice /////// 
+        vm.startPrank(Alice); 
+        asset.approve(address(box), 100);
+       
+        //PROOF GENERATED FOR {"amount": "10","secretKey": "1999"} 
         uint[2] memory a01 = [uint(0x0d386fb7621060a4a9e3a73ce3db1fc2b01d3c53b66d1afd88e118dfdb43231a), uint(0x200be9fe2680de039bf4583521479dcfcacf0d95a26e9997e27ac488edf61523)];
         uint[2][2] memory b01 = [[uint(0x2cef38a20302d3a2eb3c74d79c2723093f6e14d56dba091afd5601991f7388dc), uint(0x101fb93a7df21e83016e3a8c7f350676f7dd73b4d4c00ed04ac6bae5045aa620)],[uint(0x0631705028a27a3c32764c1bdb9636548685c184ee9e5ba470f17811078e86b9), uint(0x1cfaeeb379156910b0d1f446865a250a0afe4dfff155108cf375bbeacea10ee0)]];
         uint[2] memory c01 = [uint(0x14b1da3f6870a8c4a179ad8c5cef1503e71ea9e8dccdd8c13961fbc27b4ccaed), uint(0x049e47711d2dd887442c407ffd5666309e325de0b9bd8daf320d7793e514b224)];
@@ -67,11 +82,11 @@ using stdStorage for StdStorage;
         
         box.deposit(a01, b01, c01, input01);
         
-        assertEq(box.totalAssets(), 10); //Check that total assets is equal to 10
+        assertEq(box.totalAssets(), 25); //Check that total assets is equal to 10
         assertEq(asset.balanceOf(Alice), 0); // Balance of Alice after deposit
 
         vm.stopPrank();
-
+        
         
         ////////////////MINT///////////////////////////////////////
 
@@ -90,6 +105,8 @@ using stdStorage for StdStorage;
 
         assertEq(certificate.balanceOf(Bob),1); // to make sure that NFT is minted to Bob
 
+        
+        
         ////////////PROOF MINIMUM BALANCE///////////////////////////////
 
         //PROOF GENERATED FOR {"treshold": "4","secret": "1999","amount": "10", "nullifier": "13218455412978312490575890323879899493927815588697461542761906007863636835050"}
@@ -108,6 +125,7 @@ using stdStorage for StdStorage;
         assertTrue(box.proofMinBalance(a22, b22, c22, input22)); // TEST PROOF FOR MIN_BALANCE = 8
 
 
+
         ////////////REDEEM ASSETS///////////////////////////////
 
         //PROOF GENERATED FOR {"secret": "1999","amount": "10"}
@@ -122,12 +140,12 @@ using stdStorage for StdStorage;
         
         assertEq(certificate.balanceOf(Bob),0); // Number of certificates Bob have after redeem
         assertEq(asset.balanceOf(Bob),10); // Balance of Bob after redeem
-
-        assertEq(box.totalAssets(), 0); //Check that total assets is equal to 0 
+        assertEq(box.totalAssets(), 15); //Check that total assets is equal to 0 
         
-        vm.stopPrank();
+        vm.expectRevert("No assets to withdraw"); //Let's try to redeem second time the same assets
+        box.redeem(a31, b31, c31, input31);
 
-        //FUNCTIONS TO ADD: (1) PROOF THAT YOU HAVE SecretKey FOR PARTICULAR NFT
+        vm.stopPrank();
 
     }
 }
