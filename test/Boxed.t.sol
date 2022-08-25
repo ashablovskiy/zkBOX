@@ -43,11 +43,9 @@ using stdStorage for StdStorage;
 
         box = new Box(address(certificate),address(asset), address(dv), address(mv), address(av), address(rv));
 
-        asset.mint(Alice, 200);
+        asset.mint(Alice, 10);
         asset.mint(RandomUser, 500);
-
     }
-
 
       function testWorkflow() public {
 
@@ -65,20 +63,15 @@ using stdStorage for StdStorage;
         uint[2] memory c01 = [uint(0x14b1da3f6870a8c4a179ad8c5cef1503e71ea9e8dccdd8c13961fbc27b4ccaed), uint(0x049e47711d2dd887442c407ffd5666309e325de0b9bd8daf320d7793e514b224)];
         uint256[2] memory input01 = [uint(0x17bb043c01d34e7d8bb7369d8df719ed3132a5bd7cbc543a1a06b43d70ca8d8f),10];
 
+        assertEq(asset.balanceOf(Alice),10); // Balance of Alice before deposit
+        
         box.deposit(a01, b01, c01, input01);
-       // assertEq(box.totalAssets, 10);
+        
+        assertEq(box.totalAssets(), 10); //Check that total assets is equal to 10
+        assertEq(asset.balanceOf(Alice), 0); // Balance of Alice after deposit
+
         vm.stopPrank();
 
-        // vm.startPrank(RandomUser); //DEPOSIT BY RandomUser
-        // asset.approve(address(vault), 200);
-
-        // uint[2] memory a02 = 
-        // uint[2][2] memory b02 = 
-        // uint[2] memory c02 = 
-        // uint256[2] memory input02 = 
-
-        // vault.deposit(a02, b02, c02, input02);
-        // vm.stopPrank();
         
         ////////////////MINT///////////////////////////////////////
 
@@ -91,6 +84,7 @@ using stdStorage for StdStorage;
         uint[1] memory input1 = [uint(0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea)];
 
 
+        assertEq(certificate.balanceOf(Bob),0); // NFT Bob has before mint
 
         box.mintCertificate(a1, b1, c1, input1);
 
@@ -110,9 +104,8 @@ using stdStorage for StdStorage;
         uint[2] memory c22 = [uint(0x293ab8a3a26841b334020833c16a7959bf263e23f6724a3bf68eb97b4207d5d5), uint(0x284ad28fabb7da5a8444a280f85230d34b26ab931d357650aeef64e639889a96)];
         uint[2] memory input22 = [8, (0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea)];
         
-        box.proofMinBalance(a21, b21, c21, input21); // TEST PROOF FOR MIN_BALANCE = 4
-        box.proofMinBalance(a22, b22, c22, input22); // TEST PROOF FOR MIN_BALANCE = 8
-
+        assertTrue(box.proofMinBalance(a21, b21, c21, input21)); // TEST PROOF FOR MIN_BALANCE = 4
+        assertTrue(box.proofMinBalance(a22, b22, c22, input22)); // TEST PROOF FOR MIN_BALANCE = 8
 
 
         ////////////REDEEM ASSETS///////////////////////////////
@@ -123,8 +116,15 @@ using stdStorage for StdStorage;
         uint[2] memory c31 = [uint(0x07fe36a725e19025e0a5d6cf1c68ad2cb4fef5f3ce9a74142f859ff19f2e711d), uint(0x2595f817bc816f1e4854e78b1f59a98d2d8b71a9d93cf9c2b3dbfee8a3179f4e)];
         uint[3] memory input31 = [uint(0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea), uint(0x17bb043c01d34e7d8bb7369d8df719ed3132a5bd7cbc543a1a06b43d70ca8d8f), 10];
         
-        box.redeem(a31, b31, c31, input31);
+        assertEq(asset.balanceOf(Bob),0); // Balance of Bob before redeem
 
+        box.redeem(a31, b31, c31, input31);
+        
+        assertEq(certificate.balanceOf(Bob),0); // Number of certificates Bob have after redeem
+        assertEq(asset.balanceOf(Bob),10); // Balance of Bob after redeem
+
+        assertEq(box.totalAssets(), 0); //Check that total assets is equal to 0 
+        
         vm.stopPrank();
 
         //FUNCTIONS TO ADD: (1) PROOF THAT YOU HAVE SecretKey FOR PARTICULAR NFT

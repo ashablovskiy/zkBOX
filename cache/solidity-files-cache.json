@@ -1368,8 +1368,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/test/Boxed.t.sol": {
-      "lastModificationDate": 1661414439538,
-      "contentHash": "0560f3ead33980781b52be25220c31c2",
+      "lastModificationDate": 1661416455549,
+      "contentHash": "91d88cb63b99b98e63cd3250c6c9e24b",
       "sourceName": "test/Boxed.t.sol",
       "solcConfig": {
         "settings": {
