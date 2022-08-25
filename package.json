@@ -1,0 +1,34 @@
+{
+  "name": "zkBOX",
+  "license": "MIT",
+  "devDependencies": {
+    "circomlib": "^2.0.5",
+    "circomlibjs": "0.0.8",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3",
+    "dotenv": "^10.0.0",
+    "snarkjs": "^0.4.4"
+  },
+  "description": "Artemis Academy capstone project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashablovskiy/zkBOX.git"
+  },
+  "keywords": [
+    "zk"
+  ],
+  "author": "dybbuk",
+  "bugs": {
+    "url": "https://github.com/ashablovskiy/zkBOX/issues"
+  },
+  "homepage": "https://github.com/ashablovskiy/zkBOX#readme"
+}

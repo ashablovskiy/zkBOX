@@ -62,6 +62,8 @@ using stdStorage for StdStorage;
         uint[2] memory c00 = [uint(0x061f50752dcc1c73ec50fcb96e6431fdf0bb9e738bcb3f4ac3cd56a795e74850), uint(0x1fc9adb6285451e276eda61c6d6cad1783e722cd5a103479298d3a3f8c853c25)];
         uint256[2] memory input00 = [uint(0x11b910bdf7ee7aef1d52904f4b92260a4008e86a2e05b2e6df9256ae61d30efe),15];
 
+
+
         box.deposit(a00, b00, c00, input00);
 
         assertEq(box.totalAssets(), 15); //Check that total assets is equal to 15
@@ -148,4 +150,6 @@ using stdStorage for StdStorage;
         vm.stopPrank();
 
     }
+
+
 }
