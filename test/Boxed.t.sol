@@ -8,6 +8,9 @@ import "forge-std/console.sol";
 import "../src/Box.sol";
 import "../src/NFT.sol";
 import "../src/ERC20.sol";
+import "../src/MerkleTree.sol";
+import "../src/HasherMiMC.sol";
+
 
 import "../src/depositVerify.sol";
 import "../src/mintVerify.sol";
@@ -25,6 +28,8 @@ using stdStorage for StdStorage;
     Box box;
     BoxedNFT certificate;
     KhaosAsset asset;
+    MerkleTree merkleTree;
+    MiMC hasherHelper;
 
     DepositVerifier dv;
     MintVerifier mv;
@@ -35,13 +40,16 @@ using stdStorage for StdStorage;
 
         certificate = new BoxedNFT();
         asset = new KhaosAsset();
+        hasherHelper = new MiMC();
+        merkleTree = new MerkleTree(2, hasherHelper.sponge());
+
 
         dv = new DepositVerifier();
         mv = new MintVerifier();
         av = new AssertVerifier();
         rv = new RedeemVerifier();
 
-        box = new Box(address(certificate),address(asset), address(dv), address(mv), address(av), address(rv));
+        box = new Box(address(certificate),address(asset), address(dv), address(mv), address(av), address(rv), address(merkleTree), address(hasherHelper));
 
         asset.mint(Alice, 10);
         asset.mint(RandomUser, 500);
@@ -151,5 +159,22 @@ using stdStorage for StdStorage;
 
     }
 
+function testMerkleTree() public {
+
+console.log("LEVELS", merkleTree.levels());
+console.log("ROOT BEFORE _insert:");
+console.logBytes32(merkleTree.getLastRoot());
+
+bytes32 testCommitment = keccak256("SALT");
+
+uint realCommitmentHex =uint(0x2c8e0413f3359042704a547c9cc9e307ccd3ec64ac44ce4c6225b9244d9a9384);
+uint realCommitmentDec = 20152685765699547128308738720304401427600222654514153018442219870032144012164;
+bytes32 realC = bytes32(realCommitmentDec);
+//0x17ebb78eec239b6d3ca5fb067a4c038e8ca993739a4c1db1fbe245c77bfb3750
+merkleTree._insert(realC);
+
+console.log("ROOT AFTER _insert:");
+console.logBytes32(merkleTree.getLastRoot());
+}
 
 }

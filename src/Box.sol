@@ -3,6 +3,8 @@ pragma solidity ^ 0.8.13;
 
 import "./NFT.sol";
 import "./ERC20.sol";
+import "./MerkleTree.sol";
+
 import "./depositVerify.sol";
 import "./mintVerify.sol";
 import "./assertVerify.sol";
@@ -13,6 +15,7 @@ contract Box {
 
     BoxedNFT public certificate;
     KhaosAsset public token;
+    MerkleTree public merkleTree;
     DepositVerifier public dv;
     MintVerifier public mv;
     AssertVerifier public av;
@@ -29,10 +32,11 @@ contract Box {
     event AssertBalance(uint Nullifier, uint Minimum_Balance_Proved);
     event Redeem(uint, uint);
 
-    constructor(address _NFT, address _asset, address _dv, address _mv, address _av, address _rv) {
+    constructor(address _NFT, address _asset, address _dv, address _mv, address _av, address _rv, address _merkleTree, address _hasher) {
         
         certificate = BoxedNFT(_NFT);
         token = KhaosAsset(_asset);
+        merkleTree = MerkleTree(_merkleTree);
         dv = DepositVerifier(_dv);
         mv = MintVerifier(_mv);
         av = AssertVerifier(_av);

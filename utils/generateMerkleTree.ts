@@ -35,21 +35,17 @@ fs.writeFile ("merkleProof.txt", JSON.stringify(tree.proof(leaves.length-1)), fu
 /////////SEPARATE JSON ELEMENTS///////////
 const obj = tree.proof(leaves.length-1);
 const root = obj.root.toString();
-const pE = obj.pathElements.toString().trim().split(",").map(Number);
+const pE = obj.pathElements.toString().trim().split(",").map(BigInt);
 
 function bnToHex(bn:any) {
-  var base = 16;
-  var hex = BigInt(bn).toString(base);
-  if (hex.length % 2) {
-    hex = '0' + hex;
-  }
+  var hex = '0x' + BigInt(bn).toString(16);
   return hex;
 }
 
-console.log("root:",bnToHex(root));
-console.log("pE[1]:",bnToHex(pE[1])); //NOT CORRECT
-// for (let i1 = 0; i1 < pE.length; i1++) {
-// var pE_hex:any = bnToHex(pE[1]);
-//   };
+console.log("root_HEX:",bnToHex(root));
 
-// console.log("pE_hex:",pE_hex);
+console.log("pathElements(HEX):")
+for (let i1 = 0; i1 < pE.length; i1++) {
+var pE_hex:any = bnToHex(pE[i1]);
+console.log(pE_hex);
+  };
