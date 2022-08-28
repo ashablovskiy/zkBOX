@@ -1,4 +1,14 @@
 {
-    "amount": "10",
-    "secretKey": "1999"
+    
+    "secretKey": "111111",
+    "amount": "20",
+    "root": "0xeb9b74ac4a14e15eaec775955c536d6c224bbb2eb1a7bb32a43572d06124e35",
+    "pathElements": [
+      "0x2fe54c60d3acabf3343a35b6eba15db4821b340f76e741e2249685ed4899af6c",
+      "0x256a6135777eee2fd26f54b8b7037a25439d5235caee224154186d2b8a52e31d",
+      "0x1151949895e82ab19924de92c40a3d6f7bcb60d92b00504b8199613683f0c200",
+      "0x20121ee811489ff8d61f09fb89e313f14959a0f28bb428a20dba6b0b068b3bdb"
+    ],
+    "pathIndices": [ 0, 0, 0, 0 ],
+    "leaf": "0x02b073287ed1591f2ac2a5839c5bf60ca328660a7a949018564524cfa90e4aab"
 }

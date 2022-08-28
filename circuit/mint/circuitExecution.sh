@@ -23,7 +23,7 @@ circom ${CIRCUIT}.circom --r1cs --wasm --sym --c
 node ${CIRCUIT}_js/generate_witness.js ${CIRCUIT}_js/${CIRCUIT}.wasm ${CIRCUIT}_input.json ${CIRCUIT}_js/witness.wtns
 
 # Trusted setup phase 1 (The powers of tau, which is independent of the circuit)
-snarkjs powersoftau new bn128 12 pot12_0000.ptau -v
+snarkjs powersoftau new bn128 14 pot12_0000.ptau -v
 snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v
 snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v
 

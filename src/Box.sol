@@ -32,7 +32,9 @@ contract Box {
     event AssertBalance(uint Nullifier, uint Minimum_Balance_Proved);
     event Redeem(uint, uint);
 
-    constructor(address _NFT, address _asset, address _dv, address _mv, address _av, address _rv, address _merkleTree, address _hasher) {
+    event HelperInput(bytes32 input);
+
+    constructor(address _NFT, address _asset, address _dv, address _mv, address _av, address _rv, address _merkleTree) {
         
         certificate = BoxedNFT(_NFT);
         token = KhaosAsset(_asset);
@@ -52,6 +54,10 @@ contract Box {
         require(dv.verifyProof(a, b, c, input), "Proof is not valid");
         require(input[1]>0, "Assets shall be gretear then zero");
         require(commitments[input[0]]==0, "Commitment already exists");
+        
+        emit HelperInput(bytes32(input[0]));
+        
+        merkleTree._insert(bytes32(input[0])); // UPDATE MERKLE TREE
 
         token.transferFrom(msg.sender, address(this), input[1]); //transfer ERC20 tokens to contract
         commitments[input[0]] = input[1]; // update Commitment -> Balance
@@ -61,10 +67,12 @@ contract Box {
         return true;
     }
     /**
-    @param input[0] Nullifier = MiMC Hash(Amount, SecretKey, 1)
+    @param input[0] Nullifier = MiMC Hash(Amount, SecretKey, 2)
+    @param input[1] root
     */
-    function mintCertificate(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[1] memory input)public returns(bool) {
+    function mintCertificate(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input)public returns(bool) {
         
+        require(uint(merkleTree.getLastRoot())==input[1], "Verifying root does not exists");
         require(mv.verifyProof(a, b, c, input), "Proof is not valid");
         require(!nullifier[input[0]], "Nullifier was already used");
 

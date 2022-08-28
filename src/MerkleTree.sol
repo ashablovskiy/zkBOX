@@ -28,6 +28,7 @@ contract MerkleTree {
     event HelperN(bytes32 _left, bytes32 _right);
     event Helper1(bytes32);
     event Helper(bytes32 left, bytes32 right);
+    event HelperNewRoot(bytes32 newRoot);
 
     constructor(uint32 _levels, Hasher _hasher) {
         require(_levels > 0, "_level should be greater than zero");
@@ -90,6 +91,7 @@ contract MerkleTree {
 
         currentRootIndex = (currentRootIndex + 1) % ROOT_HISTORY_SIZE;
         roots[currentRootIndex] = currentLevelHash;
+        emit HelperNewRoot(currentLevelHash);
         return nextIndex - 1;
     }
 

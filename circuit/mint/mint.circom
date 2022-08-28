@@ -2,30 +2,78 @@ pragma circom 2.0.6;
 
 include "./mimcsponge.circom";
 
-template mint() {
-    signal  input  amount;
-    signal  input  secretKey;
-    signal  output nullifier;
+// Computes MiMC([left, right])
 
-    //check if secret is correct (hashes are qual)
-    // Currently disabled
+template HashLeftRight() {
+    signal input left;
+    signal input right;
+    signal output hash;
 
-    // component mimc1 = MiMCSponge(1, 220, 1);
-    // mimc1.ins[0] <== secretKey;
-    // mimc1.k <== 0;
-    // var out = mimc1.outs[0];
-    // assert(out == keyHash); 
-
-    // calculate Nullifier -> Hash(secretKey,1)
-    component mimc2 = MiMCSponge(3, 220, 1);
-    mimc2.ins[0] <== secretKey;
-    mimc2.ins[1] <== amount;
-    mimc2.ins[2] <== 1;
-    mimc2.k <== 0;
-    nullifier <== mimc2.outs[0];
+    component hasher = MiMCSponge(2, 220, 1);
+    hasher.ins[0] <== left;
+    hasher.ins[1] <== right;
+    hasher.k <== 0;
+    hash <== hasher.outs[0];
 }
 
-component main = mint();
-//component main { public [keyHash] } = mint();
+// if s == 0 returns [in[0], in[1]]
+// if s == 1 returns [in[1], in[0]]
 
-//PROBLEM TO SOLVE: keyHash to be private so no one can link keyHash to Nullifier
+template DualMux() {
+    signal input in[2];
+    signal input s;
+    signal output out[2];
+
+    s * (1 - s) === 0;
+    out[0] <== (in[1] - in[0])*s + in[0];
+    out[1] <== (in[0] - in[1])*s + in[1];
+}
+
+// Verifies that:
+// (1) Commitment (constructed from Amount and SecretKey) the same as privided Leaf
+// (2) merkle proof is correct for given merkle root and a Leaf
+// pathIndices input is an array of 0/1 selectors telling whether given pathElement is on the left or right side of merkle path
+
+template Mint(levels) {
+    signal  input   leaf;
+    signal  input   root;
+    signal  input   pathElements[levels];
+    signal  input   pathIndices[levels];
+
+    signal  input   amount;
+    signal  input   secretKey;
+    signal  output  nullifier;
+
+    component mimcC = MiMCSponge(3, 220, 1);
+    mimcC.ins[0] <== amount;
+    mimcC.ins[1] <== secretKey;
+    mimcC.ins[2] <== 1;
+    mimcC.k <== 0;
+
+    leaf === mimcC.outs[0]; //verifies that commitment == leaf
+    
+    component mimcN = MiMCSponge(3, 220, 1);
+    mimcN.ins[0] <== amount;
+    mimcN.ins[1] <== secretKey;
+    mimcN.ins[2] <== 2;
+    mimcN.k <== 0;
+    nullifier <== mimcN.outs[0]; //constructs nullifier
+
+    component selectors[levels];
+    component hashers[levels];
+
+    for (var i = 0; i < levels; i++) {
+        selectors[i] = DualMux();
+        selectors[i].in[0] <== i == 0 ? leaf : hashers[i - 1].hash;
+        selectors[i].in[1] <== pathElements[i];
+        selectors[i].s <== pathIndices[i];
+
+        hashers[i] = HashLeftRight();
+        hashers[i].left <== selectors[i].out[0];
+        hashers[i].right <== selectors[i].out[1];
+    }
+    
+    root === hashers[levels - 1].hash; //verifies that root generated with merkle proof for the leaf corresponds to provided as argument
+}
+
+component main{public[root]} = Mint(4); // Argument: width of tree (2^x)

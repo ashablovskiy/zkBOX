@@ -2,9 +2,9 @@ import { MerkleTree, MiMCSponge } from "./merkleTree";
 const fs = require('fs');
 
 //const int = [1,2,3,4];
-const lvl = 2;
+const lvl = 4;
 
-const ext = fs.readFileSync("./inp.txt").toString().trim().split(",").map(Number);
+const ext = fs.readFileSync("./inp.txt").toString().trim().split(",").map(BigInt);
 
 //console.log("FROM INPUT:",int);
 console.log("FROM FILE:",ext);

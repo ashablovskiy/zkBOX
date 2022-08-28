@@ -1044,8 +1044,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/Box.sol": {
-      "lastModificationDate": 1661576171048,
-      "contentHash": "4623f4afb5a13ba40b9b19230789ee8d",
+      "lastModificationDate": 1661699496008,
+      "contentHash": "58181df7c46dbfc941b0bcc568dc36b5",
       "sourceName": "src/Box.sol",
       "solcConfig": {
         "settings": {
@@ -1196,46 +1196,9 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/IHasher.sol": {
-      "lastModificationDate": 1661634021303,
-      "contentHash": "e077a8b148f3c4eca42e097da96903cd",
-      "sourceName": "src/IHasher.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ]
-            }
-          },
-          "evmVersion": "london"
-        }
-      },
-      "imports": [],
-      "versionRequirement": "^0.8.13",
-      "artifacts": {
-        "MiMCSponge": {
-          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "IHasher.sol/MiMCSponge.json"
-        }
-      }
-    },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/MerkleTree.sol": {
-      "lastModificationDate": 1661666196527,
-      "contentHash": "5761e0c80502b0ced5810575609df203",
+      "lastModificationDate": 1661698984688,
+      "contentHash": "55daa1f6687608b6e2701f9b4216f072",
       "sourceName": "src/MerkleTree.sol",
       "solcConfig": {
         "settings": {
@@ -1365,8 +1328,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/depositVerify.sol": {
-      "lastModificationDate": 1661404897952,
-      "contentHash": "831221355999aab6b3f09fb1af34d83e",
+      "lastModificationDate": 1661695974023,
+      "contentHash": "476382f9e519f28149326a3c23d69c8a",
       "sourceName": "src/depositVerify.sol",
       "solcConfig": {
         "settings": {
@@ -1405,8 +1368,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/mintVerify.sol": {
-      "lastModificationDate": 1660849537064,
-      "contentHash": "4c04e5f3b9594e8e177fea93df220ccd",
+      "lastModificationDate": 1661697522695,
+      "contentHash": "8e94d9b6cec33a5033bab3fcaaf13f94",
       "sourceName": "src/mintVerify.sol",
       "solcConfig": {
         "settings": {
@@ -1485,8 +1448,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/test/Boxed.t.sol": {
-      "lastModificationDate": 1661684998986,
-      "contentHash": "10443dd10743b3512c92641a634cbaad",
+      "lastModificationDate": 1661699504120,
+      "contentHash": "295e5bc67e0bb582e0ba9e013a884385",
       "sourceName": "test/Boxed.t.sol",
       "solcConfig": {
         "settings": {
