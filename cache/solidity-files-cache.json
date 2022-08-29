@@ -1044,8 +1044,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/Box.sol": {
-      "lastModificationDate": 1661699496008,
-      "contentHash": "58181df7c46dbfc941b0bcc568dc36b5",
+      "lastModificationDate": 1661710178289,
+      "contentHash": "322a6687df5d30949ae9c50a78bf4a73",
       "sourceName": "src/Box.sol",
       "solcConfig": {
         "settings": {
@@ -1288,8 +1288,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/assertVerify.sol": {
-      "lastModificationDate": 1660847134397,
-      "contentHash": "3328f51b928775ed76d011963003336d",
+      "lastModificationDate": 1661768591144,
+      "contentHash": "0a4493de1364db4bcd1de9920907a340",
       "sourceName": "src/assertVerify.sol",
       "solcConfig": {
         "settings": {
@@ -1322,8 +1322,8 @@
         "AssertVerifier": {
           "0.8.13+commit.abaa5c0e.Darwin.appleclang": "assertVerify.sol/AssertVerifier.json"
         },
-        "Pairing": {
-          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "assertVerify.sol/Pairing.json"
+        "PairingA": {
+          "0.8.13+commit.abaa5c0e.Darwin.appleclang": "assertVerify.sol/PairingA.json"
         }
       }
     },
@@ -1408,8 +1408,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/redeemVerify.sol": {
-      "lastModificationDate": 1660976257818,
-      "contentHash": "15ed082a0bb4640a58060a52e4e0383f",
+      "lastModificationDate": 1661769815620,
+      "contentHash": "5a1b5a6d325c4e4586a613124bbdebb7",
       "sourceName": "src/redeemVerify.sol",
       "solcConfig": {
         "settings": {
@@ -1448,8 +1448,8 @@
       }
     },
     "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/test/Boxed.t.sol": {
-      "lastModificationDate": 1661699504120,
-      "contentHash": "295e5bc67e0bb582e0ba9e013a884385",
+      "lastModificationDate": 1661770072571,
+      "contentHash": "25f29c35f5a57f669b4c228ba6d8f483",
       "sourceName": "test/Boxed.t.sol",
       "solcConfig": {
         "settings": {

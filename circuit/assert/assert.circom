@@ -9,12 +9,12 @@ template assesDeposit() {
     signal  input nullifier;
 
     //CHECK IF SECRET KEY AND AMOUNT INDICATED CORRECTLY (so newly generated Nullifier equals Nullifier on input signal)
-    component mimc2 = MiMCSponge(3, 220, 1);
-    mimc2.ins[0] <== secret;
-    mimc2.ins[1] <== amount;
-    mimc2.ins[2] <== 1;
-    mimc2.k <== 0;
-    var nullifierGenerated = mimc2.outs[0];
+    component mimc = MiMCSponge(3, 220, 1);
+    mimc.ins[0] <== amount;
+    mimc.ins[1] <== secret;
+    mimc.ins[2] <== 2;
+    mimc.k <== 0;
+    var nullifierGenerated = mimc.outs[0];
 
     assert(nullifierGenerated == nullifier && amount >= treshold);
     

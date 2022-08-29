@@ -32,7 +32,6 @@ contract Box {
     event AssertBalance(uint Nullifier, uint Minimum_Balance_Proved);
     event Redeem(uint, uint);
 
-    event HelperInput(bytes32 input);
 
     constructor(address _NFT, address _asset, address _dv, address _mv, address _av, address _rv, address _merkleTree) {
         
@@ -55,7 +54,6 @@ contract Box {
         require(input[1]>0, "Assets shall be gretear then zero");
         require(commitments[input[0]]==0, "Commitment already exists");
         
-        emit HelperInput(bytes32(input[0]));
         
         merkleTree._insert(bytes32(input[0])); // UPDATE MERKLE TREE
 
@@ -76,8 +74,8 @@ contract Box {
         require(mv.verifyProof(a, b, c, input), "Proof is not valid");
         require(!nullifier[input[0]], "Nullifier was already used");
 
-        certificate.safeMint(msg.sender, input[0]); // Mint NFT
-        nullifier[input[0]] = true; // Set Nullifier -> True to avoid it repeated usage
+        certificate.safeMint(msg.sender, input[0]); 
+        nullifier[input[0]] = true; 
 
         emit Minted(input[0], msg.sender);
         return true;
@@ -104,7 +102,7 @@ contract Box {
     function redeem(uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[3] memory input) public returns(bool) {
 
         require(rv.verifyProof(a, b, c, input), "Proof is not valid");
-        require(nullifier[input[0]], "Nullifier was not used before");
+        require(nullifier[input[0]], "Nullifier does not exists");
         require(commitments[input[1]]>0, "No assets to withdraw");
         require(certificate.nullifiersAssigned(input[0])==0, "Certificate for nullifier is not minted");
         require(certificate.ownerOf(certificate.tokenIdAssigned(input[0])) == msg.sender, "Only the owner of NFT can burn it");

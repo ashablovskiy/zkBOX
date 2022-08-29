@@ -43,7 +43,6 @@ using stdStorage for StdStorage;
         hasherHelper = new MiMC();
         merkleTree = new MerkleTree(4, hasherHelper.sponge());
 
-
         dv = new DepositVerifier();
         mv = new MintVerifier();
         av = new AssertVerifier();
@@ -57,12 +56,12 @@ using stdStorage for StdStorage;
 
       function testWorkflow() public {
 
-       ///////////////////////DEPOSIT/////////////////////////////////////////////////////////////////////////////
-
         vm.startPrank(Alice); 
         asset.approve(address(box), 100);
        
         /**
+        DEPOSIT ASSETS
+
         PROOF GENERATED FOR:
 
         "amount": "20",
@@ -85,11 +84,11 @@ using stdStorage for StdStorage;
 
         vm.stopPrank();
         
-        ////////////////MINT///////////////////////////////////////////////////////////////////////////
-
         vm.startPrank(Bob);
 
         /**
+        MINT CERTIFICATE
+        
         PROOF GENERATED FOR:
 
         "secretKey": "111111",
@@ -115,36 +114,46 @@ using stdStorage for StdStorage;
 
         assertEq(certificate.balanceOf(Bob),1); // to make sure that NFT is minted to Bob
 
-        // ////////////PROOF MINIMUM BALANCE///////////////////////////////
+        /** 
+        PROOF MINIMUM BALANCE
 
-        // //PROOF GENERATED FOR {"treshold": "4","secret": "1999","amount": "10", "nullifier": "13218455412978312490575890323879899493927815588697461542761906007863636835050"}
-        // uint[2] memory a21 = [uint(0x28284674fe3b36fd30357a325a042927d9371da57d2dfd89867662b92c567ab6), uint(0x10f6fedba94194c59c9ffd67d7334c339a496c0405ebfa5cca73fcaa3fcf3653)];
-        // uint[2][2] memory b21 = [[uint(0x127af98e7d1b834902e438e69c27ef760f45a6a00714fd4137146be8add12dcb), uint(0x2e35fb8a87b11679c14cef22a6860173741665de1b3495fc7e6c7c194c6728a0)],[uint(0x28182f2c417f027e4f9fd56a156596d2a29a13449724ed20c3d65c021cb62189), uint(0x06ff4de899e9408014fd0371c1c1284eb308a230e1492d0d64c99b557b851857)]];
-        // uint[2] memory c21 = [uint(0x216668b704e4dde2f04b78cbdc383eb382a1e839846ec21c47c3d3932b6a3020), uint(0x2424fb88a16ec9b259032b2f706e9413fdd813ac90a8500b539a2edea2e2e51a)];
-        // uint[2] memory input21 = [4, uint(0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea)];
-
-        // assertTrue(box.proofMinBalance(a21, b21, c21, input21)); // TEST PROOF FOR MIN_BALANCE = 4
-
-
-
-        // ////////////REDEEM ASSETS///////////////////////////////
-
-        // //PROOF GENERATED FOR {"secret": "1999","amount": "10"}
-        // uint[2] memory a31 = [uint(0x1440808a6527a70cdf60cc81b3080eb3426e825ff92372fdd1992440cace6e00), uint(0x063844212dd34f8be7c74eb5daacb927c5c0e98778b1df6d15e05fa41ef532a9)];
-        // uint[2][2] memory b31 = [[uint(0x2236df31dfe04d0b024d97d4bb33bbcca1a85d43ffc63b8e6783959bfdd4e88d), uint(0x07c9d625ddf42e658310503741c3c84f8ba8bcbcb86ccab245bd7b595d0334db)],[uint(0x0f52528b5990c31782b03c3d931648d6a603ce465912025b0bfc64c413e97bcd), uint(0x1ff4f855a8a9b83e90121be4807fec1ddeff080f0ae9bcd772d0708f83b10de3)]];
-        // uint[2] memory c31 = [uint(0x07fe36a725e19025e0a5d6cf1c68ad2cb4fef5f3ce9a74142f859ff19f2e711d), uint(0x2595f817bc816f1e4854e78b1f59a98d2d8b71a9d93cf9c2b3dbfee8a3179f4e)];
-        // uint[3] memory input31 = [uint(0x1d396171343daa988ac34690412d7f9f03edbf1348c8035ed525e2638fccbaea), uint(0x17bb043c01d34e7d8bb7369d8df719ed3132a5bd7cbc543a1a06b43d70ca8d8f), 10];
+        PROOF GENERATED FOR:
         
+        "treshold": "12",
+        "secret": "111111",
+        "amount": "20",
+        "nullifier": "5076799886472541078874867201030064582719343703460290082042269264860114411539"
+        */
+        uint[2] memory a21 = [uint(0x1f35e207a87e5c360cfd69b4c5f43f9eaaca18c9cb83387c9c45720c0e55f7f5), uint(0x08f18218988401364bed6c08826c71052c60fb755a000f84923349f971204456)];
+        uint[2][2] memory b21 = [[uint(0x06253141d9e1d9463857bb8fd7caa9d43ad7c9381b2d0afbe3763fd7d0a3f22e), uint(0x0a56dd89ca551f5702e677b3aca5df3d1d727cbf2527994edb05e806100861e4)],[uint(0x0a8e70d2510e779121807db42a8d84d48560e796d95af7a4f4461515ad505491), uint(0x2c52ed16848fb5fd104139d9364392a47f4e17721f511bb15f542cc0489f258b)]];
+        uint[2] memory c21 = [uint(0x01b4ea65c27decc2b394592aa107bf0b27db189fa43df5fb4e5fcd0b63cad316), uint(0x034f2a6db357fdea772bf09ec708395470d4ce9bee217b5ed8bcfda2470f18c1)];
+        uint[2] memory input21 = [12,uint(0x0b395deda5aa694a22a9a9aad7f8301bad7c8efeef80bc1f31d84a0e79456013)];
+
+        assertTrue(box.proofMinBalance(a21, b21, c21, input21)); 
+
+        /**
+        REDEEM ASSETS
+
+        PROOF GENERATED FOR:
+
+        "secret": "111111",
+        "amount": "20"
+        */
+        uint[2] memory a31 = [uint(0x1dc8003f92b5e086dadf9af181d489cb4ccdaa72a482a2d9d7b893eafcde4ec4), uint(0x198241e540d72c9323ce2f539090b316bc9bd73e5c0365a2fa4b8aa365d4cf36)];
+        uint[2][2] memory b31 = [[uint(0x08f1ef87b5eab3bfbef4aa042257fd1c4ece969bdce25cfaf4d6538a27ac443d), uint(0x2f6e5f8cf9163dc11bd6ba48b54cff28ffae7f691dbb385995f772e673b98af1)],[uint(0x00392cf5e29c5635d178435bf062773d75defce1cda2f67eed5f446fc6484af6), uint(0x23abad3bac53222d8d7fb93418e62b2316ad723ea701aba84c3ee4e4265f4c0c)]];
+        uint[2] memory c31 = [uint(0x07397168e2e6542f8f25c72cfe0085ec529d2a77582f0973ebd774215fb11ff9), uint(0x1a14e566efb87fe4a502b66e509ff186d0a74445c082a8d43827d4dda3c1a46e)];
+        uint[3] memory input31 = [uint(0x0b395deda5aa694a22a9a9aad7f8301bad7c8efeef80bc1f31d84a0e79456013),uint(0x02b073287ed1591f2ac2a5839c5bf60ca328660a7a949018564524cfa90e4aab),20];
+
         // assertEq(asset.balanceOf(Bob),0); // Balance of Bob before redeem
 
-        // box.redeem(a31, b31, c31, input31);
+        box.redeem(a31, b31, c31, input31);
         
-        // assertEq(certificate.balanceOf(Bob),0); // Number of certificates Bob have after redeem
-        // assertEq(asset.balanceOf(Bob),10); // Balance of Bob after redeem
-        // assertEq(box.totalAssets(), 15); //Check that total assets is equal to 0 
+        assertEq(certificate.balanceOf(Bob),0); // Number of certificates Bob have after redeem
+        assertEq(asset.balanceOf(Bob),20); // Balance of Bob after redeem
+        assertEq(box.totalAssets(), 0); //Check that total assets is equal to 0 
         
-        // vm.expectRevert("No assets to withdraw"); //Let's try to redeem second time the same assets
-        // box.redeem(a31, b31, c31, input31);
+        vm.expectRevert("No assets to withdraw"); //Let's try to redeem second time the same assets
+        box.redeem(a31, b31, c31, input31);
 
         vm.stopPrank();
 
