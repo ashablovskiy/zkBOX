@@ -45,7 +45,7 @@ Design principle is based on commitment-nullifier scheme: anyone who deposits a 
 ## Usage
 <br/>
 
-To **generate new proof** use (replace 'deposit' keyword in example below with required proof: deposit, mint, assert, redeem): <br/>
+To **generate new proof** (replace 'deposit' keyword in example below with required proof: deposit, mint, assert, redeem): <br/>
 (1) indicate input data in `./circuit/deposit/deposit_Input.json` <br/>
 (2) run `./circuit/deposit/newProof.sh deposit` script <br/><br/>
 
