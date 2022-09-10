@@ -9,7 +9,7 @@
     ]
   },
   "files": {
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/forge-std/src/Script.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/forge-std/src/Script.sol": {
       "lastModificationDate": 1659118747415,
       "contentHash": "b313d0193442f5a12848be9c422a0064",
       "sourceName": "lib/forge-std/src/Script.sol",
@@ -50,7 +50,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/forge-std/src/Test.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/forge-std/src/Test.sol": {
       "lastModificationDate": 1659118747415,
       "contentHash": "1759d8269e5e14639f70a8b52dcee716",
       "sourceName": "lib/forge-std/src/Test.sol",
@@ -102,7 +102,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/forge-std/src/Vm.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/forge-std/src/Vm.sol": {
       "lastModificationDate": 1659118747416,
       "contentHash": "8eb0bacb50669fafb4a48134fc93ed36",
       "sourceName": "lib/forge-std/src/Vm.sol",
@@ -139,7 +139,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/forge-std/src/console.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/forge-std/src/console.sol": {
       "lastModificationDate": 1659118747416,
       "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
       "sourceName": "lib/forge-std/src/console.sol",
@@ -176,7 +176,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/forge-std/src/console2.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/forge-std/src/console2.sol": {
       "lastModificationDate": 1659118747416,
       "contentHash": "5df91f8e93efbfcccf68973dc1b74a70",
       "sourceName": "lib/forge-std/src/console2.sol",
@@ -213,7 +213,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
       "lastModificationDate": 1659118747430,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
@@ -252,7 +252,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1659118747450,
       "contentHash": "92cc1aad41bdb18ca20f6e03f461de7d",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
@@ -293,7 +293,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1659118747450,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
@@ -330,7 +330,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1659118747451,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
@@ -369,7 +369,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol": {
       "lastModificationDate": 1659118747451,
       "contentHash": "3c98f8ccc741d97ece615ce32d638d4c",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
@@ -416,7 +416,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
       "lastModificationDate": 1659118747451,
       "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
@@ -453,7 +453,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "79ac3a660a4ff0bad2c2f65ec4d61d86",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
@@ -499,7 +499,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "ec99d946db3685a3630554aa6055bd7f",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
@@ -538,7 +538,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "c22d4395e33763de693fd440c6fd10e1",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
@@ -575,7 +575,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "88095889e59d16821879a8083f906503",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
@@ -623,7 +623,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
@@ -663,7 +663,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
       "lastModificationDate": 1659118747452,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
@@ -703,7 +703,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
       "lastModificationDate": 1659118747454,
       "contentHash": "02560bbb9e081911e486286da3fa761f",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Address.sol",
@@ -740,7 +740,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
       "lastModificationDate": 1659118747454,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
@@ -777,7 +777,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
       "lastModificationDate": 1659118747454,
       "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
@@ -814,7 +814,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
       "lastModificationDate": 1659118747454,
       "contentHash": "cf46906c4035f51639a22265066a9e78",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
@@ -851,7 +851,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
       "lastModificationDate": 1659118747454,
       "contentHash": "1dfb7cf7c7e2edae73403d50a59cc967",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol",
@@ -890,7 +890,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol": {
       "lastModificationDate": 1659118747455,
       "contentHash": "161aae4dc1450371d0f324488f66a9cf",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol",
@@ -930,7 +930,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1659118747455,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
@@ -969,7 +969,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1659118747455,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
@@ -1006,7 +1006,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/lib/solmate/lib/ds-test/src/test.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/lib/solmate/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1659118747476,
       "contentHash": "962996f0e05d5218857a538a62d7c47e",
       "sourceName": "lib/solmate/lib/ds-test/src/test.sol",
@@ -1043,9 +1043,9 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/Box.sol": {
-      "lastModificationDate": 1661710178289,
-      "contentHash": "322a6687df5d30949ae9c50a78bf4a73",
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/Box.sol": {
+      "lastModificationDate": 1661885256870,
+      "contentHash": "6953279ea11541a32a3f81c640a543fa",
       "sourceName": "src/Box.sol",
       "solcConfig": {
         "settings": {
@@ -1108,7 +1108,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/ERC20.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/ERC20.sol": {
       "lastModificationDate": 1660161442385,
       "contentHash": "c81089c7cc80b0ad8e6c4ad9e2df3707",
       "sourceName": "src/ERC20.sol",
@@ -1157,7 +1157,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/HasherMiMC.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/HasherMiMC.sol": {
       "lastModificationDate": 1661634822744,
       "contentHash": "d9f5a4ef002cdaa53df22868e43d1087",
       "sourceName": "src/HasherMiMC.sol",
@@ -1196,7 +1196,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/MerkleTree.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/MerkleTree.sol": {
       "lastModificationDate": 1661698984688,
       "contentHash": "55daa1f6687608b6e2701f9b4216f072",
       "sourceName": "src/MerkleTree.sol",
@@ -1236,7 +1236,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/NFT.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/NFT.sol": {
       "lastModificationDate": 1661414842969,
       "contentHash": "a0fb97d539346cfca3e070619079223a",
       "sourceName": "src/NFT.sol",
@@ -1287,7 +1287,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/assertVerify.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/assertVerify.sol": {
       "lastModificationDate": 1661768591144,
       "contentHash": "0a4493de1364db4bcd1de9920907a340",
       "sourceName": "src/assertVerify.sol",
@@ -1327,7 +1327,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/depositVerify.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/depositVerify.sol": {
       "lastModificationDate": 1661695974023,
       "contentHash": "476382f9e519f28149326a3c23d69c8a",
       "sourceName": "src/depositVerify.sol",
@@ -1367,7 +1367,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/mintVerify.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/mintVerify.sol": {
       "lastModificationDate": 1661697522695,
       "contentHash": "8e94d9b6cec33a5033bab3fcaaf13f94",
       "sourceName": "src/mintVerify.sol",
@@ -1407,7 +1407,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/src/redeemVerify.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/src/redeemVerify.sol": {
       "lastModificationDate": 1661769815620,
       "contentHash": "5a1b5a6d325c4e4586a613124bbdebb7",
       "sourceName": "src/redeemVerify.sol",
@@ -1447,7 +1447,7 @@
         }
       }
     },
-    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX_HADI/test/Boxed.t.sol": {
+    "/Users/andrei/WEB3/ARTEMIS_PoC/Capstone_project/zkBOX/test/Boxed.t.sol": {
       "lastModificationDate": 1661770072571,
       "contentHash": "25f29c35f5a57f669b4c228ba6d8f483",
       "sourceName": "test/Boxed.t.sol",

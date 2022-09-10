@@ -57,7 +57,8 @@ contract Box {
         
         merkleTree._insert(bytes32(input[0])); // UPDATE MERKLE TREE
 
-        token.transferFrom(msg.sender, address(this), input[1]); //transfer ERC20 tokens to contract
+        require(token.transferFrom(msg.sender, address(this), input[1]),"Transfer failed"); //transfer ERC20 tokens to contract
+
         commitments[input[0]] = input[1]; // update Commitment -> Balance
         totalAssets += input[1]; // update Total Assets deposited
 
@@ -110,7 +111,7 @@ contract Box {
         totalAssets -= input[2]; // reduce total assets variable
         commitments[input[1]]=0; // reset commitment balance to 0
         
-        token.transfer(msg.sender, input[2]); // transfer balance to redeemer
+        require(token.transfer(msg.sender, input[2]), "Tranfer failed"); // transfer balance to redeemer
  
         certificate.burn(certificate.tokenIdAssigned(input[0])); // burn NFT: To get TokenId tokenIdAssigned mapping is used
 
